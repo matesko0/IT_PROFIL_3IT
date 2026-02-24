@@ -1,81 +1,57 @@
-{
-  "name": "Matěj Maršík",
-  "skills": [
-    {
-      "name": "Programování",
-      "description": "Základy v Pythonu, C# a čistém C.",
-      "icon": "fa-code",
-      "color": "indigo-600",
-      "hoverColor": "hover:bg-indigo-600"
-    },
-    {
-      "name": "CapCut & Canva",
-      "description": "Střih videí a kreativní grafika.",
-      "icon": "fa-clapperboard",
-      "color": "rose-500",
-      "hoverColor": "hover:bg-rose-500"
-    },
-    {
-      "name": "Excel & Cloud",
-      "description": "Tabulky a správa dat na Cloudu.",
-      "icon": "fa-file-excel",
-      "color": "slate-600",
-      "hoverColor": "hover:bg-slate-700"
-    },
-    {
-      "name": "Sítě & Software",
-      "description": "Základy sítí a rychlé učení v SW.",
-      "icon": "fa-network-wired",
-      "color": "violet-600",
-      "hoverColor": "hover:bg-violet-600"
-    },
-    {
-      "name": "Logika",
-      "description": "Řešení problémů krok po kroku.",
-      "icon": "fa-gears",
-      "color": "orange-500",
-      "hoverColor": "hover:bg-orange-500"
-    },
-    {
-      "name": "AI a novinky",
-      "description": "Práce s moderními AI nástroji.",
-      "icon": "fa-brain",
-      "color": "fuchsia-600",
-      "hoverColor": "hover:bg-fuchsia-600"
-    }
-  ],
-  "interests": [
-    {
-      "title": "Hasiči",
-      "icon": "fa-fire-extinguisher",
-      "color": "text-red-600",
-      "hoverColor": "hover:bg-red-600"
-    },
-    {
-      "title": "Technologie",
-      "icon": "fa-cog",
-      "color": "text-slate-800",
-      "hoverColor": "hover:bg-slate-900"
-    },
-    {
-      "title": "Gaming",
-      "icon": "fa-gamepad",
-      "color": "text-indigo-600",
-      "hoverColor": "hover:bg-indigo-600"
-    },
-    {
-      "title": "Lyžování",
-      "icon": "fa-person-skiing",
-      "color": "text-sky-600",
-      "hoverColor": "hover:bg-sky-600"
-    }
-  ],
-  "projects": [
-    {
-      "title": "Osobní web",
-      "description": "Jednostránkový profil na GitHub Pages s dynamickým načítáním.",
-      "link": "https://github.com/matesko0/aboutmev2",
-      "tags": ["HTML", "JS", "Tailwind"]
-    }
-  ]
+/* Animace pohybu "disco koulí" na pozadí */
+@keyframes float {
+    0% { transform: translate(0, 0) scale(1) rotate(0deg); }
+    50% { transform: translate(10vw, -10vh) scale(1.2) rotate(180deg); }
+    100% { transform: translate(0, 0) scale(1) rotate(360deg); }
+}
+
+@keyframes shimmer {
+    100% { transform: translateX(100%); }
+}
+
+body {
+    background-color: #020617;
+    margin: 0;
+    min-height: 100vh;
+}
+
+/* Kontejner pro barvy */
+.bg-animation {
+    position: fixed;
+    inset: 0;
+    z-index: -1;
+    filter: blur(100px);
+    overflow: hidden;
+}
+
+.blob {
+    position: absolute;
+    width: 60vw;
+    height: 60vw;
+    border-radius: 50%;
+    opacity: 0.4;
+    animation: float 25s infinite ease-in-out alternate;
+}
+
+.blob-1 { background: #4f46e5; top: -10%; left: -10%; }
+.blob-2 { background: #db2777; bottom: -10%; right: -10%; animation-duration: 30s; animation-direction: reverse; }
+.blob-3 { background: #06b6d4; top: 30%; left: 20%; animation-duration: 35s; opacity: 0.3; }
+
+/* Skleněný efekt */
+.glass {
+    background: rgba(15, 23, 42, 0.4);
+    backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(20px);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+/* Animace vstupu */
+.fade-in {
+    opacity: 0;
+    transform: translateY(20px);
+    animation: fadeIn 1s ease-out forwards;
+}
+
+@keyframes fadeIn {
+    to { opacity: 1; transform: translateY(0); }
 }
