@@ -1,7 +1,81 @@
-body {
-    font-family: sans-serif;
-    max-width: 600px;
-    margin: 40px auto;
-    background-color: #f4f4f4;
+{
+  "name": "Matěj Maršík",
+  "skills": [
+    {
+      "name": "Programování",
+      "description": "Základy v Pythonu, C# a čistém C.",
+      "icon": "fa-code",
+      "color": "indigo-600",
+      "hoverColor": "hover:bg-indigo-600"
+    },
+    {
+      "name": "CapCut & Canva",
+      "description": "Střih videí a kreativní grafika.",
+      "icon": "fa-clapperboard",
+      "color": "rose-500",
+      "hoverColor": "hover:bg-rose-500"
+    },
+    {
+      "name": "Excel & Cloud",
+      "description": "Tabulky a správa dat na Cloudu.",
+      "icon": "fa-file-excel",
+      "color": "slate-600",
+      "hoverColor": "hover:bg-slate-700"
+    },
+    {
+      "name": "Sítě & Software",
+      "description": "Základy sítí a rychlé učení v SW.",
+      "icon": "fa-network-wired",
+      "color": "violet-600",
+      "hoverColor": "hover:bg-violet-600"
+    },
+    {
+      "name": "Logika",
+      "description": "Řešení problémů krok po kroku.",
+      "icon": "fa-gears",
+      "color": "orange-500",
+      "hoverColor": "hover:bg-orange-500"
+    },
+    {
+      "name": "AI a novinky",
+      "description": "Práce s moderními AI nástroji.",
+      "icon": "fa-brain",
+      "color": "fuchsia-600",
+      "hoverColor": "hover:bg-fuchsia-600"
+    }
+  ],
+  "interests": [
+    {
+      "title": "Hasiči",
+      "icon": "fa-fire-extinguisher",
+      "color": "text-red-600",
+      "hoverColor": "hover:bg-red-600"
+    },
+    {
+      "title": "Technologie",
+      "icon": "fa-cog",
+      "color": "text-slate-800",
+      "hoverColor": "hover:bg-slate-900"
+    },
+    {
+      "title": "Gaming",
+      "icon": "fa-gamepad",
+      "color": "text-indigo-600",
+      "hoverColor": "hover:bg-indigo-600"
+    },
+    {
+      "title": "Lyžování",
+      "icon": "fa-person-skiing",
+      "color": "text-sky-600",
+      "hoverColor": "hover:bg-sky-600"
+    }
+  ],
+  "projects": [
+    {
+      "title": "Osobní web",
+      "description": "Jednostránkový profil na GitHub Pages s dynamickým načítáním.",
+      "link": "https://github.com/matesko0/aboutmev2",
+      "tags": ["HTML", "JS", "Tailwind"]
+    }
+  ]
 }
-h1 { color: #333; }
